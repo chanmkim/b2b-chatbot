@@ -1,92 +1,84 @@
-이 프로젝트는 [`EasyNext`](https://github.com/easynext/easynext)를 사용해 생성된 [Next.js](https://nextjs.org) 프로젝트입니다.
+# B2B Chat Application
 
-## Getting Started
+## 프로젝트 소개
 
-개발 서버를 실행합니다.<br/>
-환경에 따른 명령어를 사용해주세요.
+B2B Chat은 기업 간 커뮤니케이션을 위한 현대적인 채팅 애플리케이션입니다. Next.js 13 App Router와 Supabase를 활용하여 구축되었으며, 실시간 채팅과 기업 간 메시징을 지원합니다.
 
+🔗 **Live Demo**: [https://b2b-chat.vercel.app/](https://b2b-chat.vercel.app/)
+
+## 주요 기능
+
+### 1. 실시간 채팅
+- 기업 간 실시간 메시지 교환
+- 읽음 상태 표시
+- 이미지 및 파일 공유 기능
+
+### 2. 사용자 관리
+- 기업 계정 관리
+- 사용자 프로필 설정
+- 권한 기반 접근 제어
+
+### 3. 기업 관리
+- 기업 프로필 관리
+- 직원 초대 및 관리
+- 기업 간 연결 관리
+
+## 기술 스택
+
+- **Frontend**: Next.js 13 (App Router), React, TypeScript
+- **Styling**: Tailwind CSS, shadcn/ui
+- **Backend**: Supabase
+- **상태 관리**: TanStack Query, Zustand
+- **폼 관리**: React Hook Form, Zod
+- **유틸리티**: date-fns, ts-pattern
+
+## URL 구조
+
+```
+/ - 메인 페이지
+├── /auth
+│   ├── /signin - 로그인
+│   └── /signup - 회원가입
+├── /dashboard
+│   ├── /chat - 채팅 목록
+│   ├── /profile - 프로필 관리
+│   └── /settings - 설정
+└── /company
+    ├── /[id] - 기업 상세 정보
+    └── /manage - 기업 관리
+```
+
+## 개발 환경 설정
+
+1. 저장소 클론
+```bash
+git clone https://github.com/[username]/b2b-chat.git
+cd b2b-chat
+```
+
+2. 의존성 설치
+```bash
+npm install
+```
+
+3. 환경 변수 설정
+```bash
+cp .env.example .env.local
+```
+
+4. 개발 서버 실행
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 결과를 확인할 수 있습니다.
+## 환경 변수 설정
 
-`app/page.tsx` 파일을 수정하여 페이지를 편집할 수 있습니다. 파일을 수정하면 자동으로 페이지가 업데이트됩니다.
+프로젝트 실행을 위해 다음 환경 변수가 필요합니다:
 
-## 기본 포함 라이브러리
+- `NEXT_PUBLIC_SUPABASE_URL`: Supabase 프로젝트 URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Supabase 익명 키
+- `NEXT_PUBLIC_SITE_URL`: 사이트 URL
 
-- [Next.js](https://nextjs.org)
-- [React](https://react.dev)
-- [Tailwind CSS](https://tailwindcss.com)
-- [TypeScript](https://www.typescriptlang.org)
-- [ESLint](https://eslint.org)
-- [Prettier](https://prettier.io)
-- [Shadcn UI](https://ui.shadcn.com)
-- [Lucide Icon](https://lucide.dev)
-- [date-fns](https://date-fns.org)
-- [react-use](https://github.com/streamich/react-use)
-- [es-toolkit](https://github.com/toss/es-toolkit)
-- [Zod](https://zod.dev)
-- [React Query](https://tanstack.com/query/latest)
-- [React Hook Form](https://react-hook-form.com)
-- [TS Pattern](https://github.com/gvergnaud/ts-pattern)
+## 라이선스
 
-## 사용 가능한 명령어
-
-한글버전 사용
-
-```sh
-easynext lang ko
-```
-
-최신버전으로 업데이트
-
-```sh
-npm i -g @easynext/cli@latest
-# or
-yarn add -g @easynext/cli@latest
-# or
-pnpm add -g @easynext/cli@latest
-```
-
-Supabase 설정
-
-```sh
-easynext supabase
-```
-
-Next-Auth 설정
-
-```sh
-easynext auth
-
-# ID,PW 로그인
-easynext auth idpw
-# 카카오 로그인
-easynext auth kakao
-```
-
-유용한 서비스 연동
-
-```sh
-# Google Analytics
-easynext gtag
-
-# Microsoft Clarity
-easynext clarity
-
-# ChannelIO
-easynext channelio
-
-# Sentry
-easynext sentry
-
-# Google Adsense
-easynext adsense
-```
+MIT License
