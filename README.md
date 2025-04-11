@@ -2,7 +2,7 @@
 
 ## 프로젝트 소개
 
-B2B Chat은 기업 간 커뮤니케이션을 위한 현대적인 채팅 애플리케이션입니다. Next.js 13 App Router와 Supabase를 활용하여 구축되었으며, 실시간 채팅과 기업 간 메시징을 지원합니다.
+B2B Chat은 기업 간 커뮤니케이션을 위한 CS챗봇. Next.js 13 App Router와 Supabase를 활용하여 구축되었음
 
 🔗 **Live Demo**: [https://b2b-chat.vercel.app/](https://b2b-chat.vercel.app/)
 
